@@ -6,6 +6,8 @@ The latest release is a **local-only nostalgia app**. It listens on `127.0.0.1` 
 
 Do not expose this version through port forwarding, a tunnel or a reverse proxy. Public hosting is tracked in [ROADMAP.md](ROADMAP.md), including identity, TLS, moderation and a separate access model.
 
+The [connected-edition proposal](docs/CONNECTED.md) defines an open-registration service and its future security gates. Its authentication, persistence and moderation controls are not implemented in this release.
+
 ## Boundaries
 
 | Boundary | Behavior |
