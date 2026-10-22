@@ -38,17 +38,18 @@ const test = base.extend({
       viewport: { width: 1440, height: 900 },
       recordVideo: { dir: info.outputPath('peer-video') },
     });
-    const page = await context.newPage();
-    watch(page, health);
-    const video = page.video();
+    let video;
     try {
+      const page = await context.newPage();
+      watch(page, health);
+      video = page.video();
       await use(page);
     } finally {
-      const failed = info.status !== info.expectedStatus;
+      const failed = info.status !== info.expectedStatus || health.length > 0;
       await context.close();
-      if (failed) {
+      if (failed && video) {
         await info.attach('peer video', { path: await video.path(), contentType: 'video/webm' });
-      } else {
+      } else if (video) {
         await video.delete();
       }
     }
