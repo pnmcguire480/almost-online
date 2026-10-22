@@ -9,7 +9,12 @@ Before a pull request:
 ```sh
 npm run test:coverage
 npm run test:controls
+npx playwright install chromium
+npm run test:browser
+npm run test:browser:controls
 ```
+
+The browser suite starts and stops its own local server for each test. It uses isolated browser contexts and real WebSockets. See [the browser testing guide](docs/BROWSER_TESTS.md) for reports, traces and recording.
 
 Add behavioral tests for changed trust boundaries, session isolation, cancellation and data lifetimes. Keep server line coverage at or above 90%; do not add tests just to raise a number. For a security boundary, include a deliberately broken control that proves the test detects the failure. Show UI changes with a screenshot and describe the workflow you exercised.
 

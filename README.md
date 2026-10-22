@@ -9,6 +9,8 @@ A working love letter to 1996 chat rooms: chunky windows, screen names, buddy li
 [![CI](https://github.com/pnmcguire480/almost-online/actions/workflows/ci.yml/badge.svg)](https://github.com/pnmcguire480/almost-online/actions/workflows/ci.yml)
 [![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+**[Watch the screen-recorded demo](https://github.com/pnmcguire480/almost-online/releases/download/v0.1.1/almost-online-demo.mp4)** · [Captions and downloads](https://github.com/pnmcguire480/almost-online/releases/tag/v0.1.1)
+
 ## Bring the room back
 
 This is the starting point for a collaboration. Remember your first screen name? Built a VB proggie? Have old screenshots, an ear for dial-up sounds, or an itch to make small online communities feel human again?
@@ -59,9 +61,14 @@ Browser-origin and Host checks protect the local WebSocket endpoint. File servin
 npm test
 npm run test:coverage
 npm run test:controls
+npx playwright install chromium
+npm run test:browser
+npm run test:browser:controls
 ```
 
-CI runs on Windows and Linux. Coverage enforces a **90% server line floor**; browser JavaScript is outside that metric. Deliberately broken controls prove tests detect missing protections. [Release verification](docs/releases/v0.1.0.md) · [Wire protocol](docs/PROTOCOL.md) · [Earlier verification](docs/VERIFICATION.md)
+CI runs the server and real-browser suites on **Windows and Linux on every push and pull request**. Eight browser workflows use isolated participants and fresh local servers: room chat, IMs/away, literal HTML rendering, ignore, complete ASCII scrolling, Stop, room-departure cancellation, buddy/session reset and narrow-layout controls. Failed browser runs retain traces, screenshots and both participants' videos in downloadable CI artifacts.
+
+Coverage enforces a **90% server line floor**; browser JavaScript is outside that percentage. Eight server and two browser controls deliberately break implementations to prove the tests detect failures. [Browser tests and recording guide](docs/BROWSER_TESTS.md) · [v0.1.1 verification](docs/releases/v0.1.1.md) · [Original release verification](docs/releases/v0.1.0.md) · [Wire protocol](docs/PROTOCOL.md)
 
 ## Credits and license
 

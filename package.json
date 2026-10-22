@@ -1,14 +1,24 @@
 {
   "name": "almost-online",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "You've got nostalgia. A local 1996-style chat room with a Fate X tribute ASCII scroller.",
   "private": true,
   "license": "MIT",
   "author": "Patrick McGuire",
-  "repository": { "type": "git", "url": "https://github.com/pnmcguire480/almost-online.git" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pnmcguire480/almost-online.git"
+  },
   "homepage": "https://github.com/pnmcguire480/almost-online#readme",
   "bugs": "https://github.com/pnmcguire480/almost-online/issues",
-  "keywords": ["aol", "retro", "chat", "websocket", "ascii-art", "nostalgia"],
+  "keywords": [
+    "aol",
+    "retro",
+    "chat",
+    "websocket",
+    "ascii-art",
+    "nostalgia"
+  ],
   "main": "server.js",
   "engines": {
     "node": ">=24"
@@ -17,12 +27,17 @@
     "start": "node server.js",
     "test": "node --test test/*.test.js",
     "test:coverage": "c8 --all --include=lib/**/*.js --include=server.js --reporter=text --reporter=json-summary --check-coverage --lines=90 node --test test/*.test.js",
-    "test:controls": "node test/controls.js"
+    "test:controls": "node test/controls.js",
+    "test:browser": "playwright test",
+    "test:browser:controls": "node e2e/controls.js",
+    "demo:record": "node scripts/record-demo.js",
+    "demo:render": "node scripts/render-demo.js"
   },
   "dependencies": {
     "ws": "^8.22.0"
   },
   "devDependencies": {
+    "@playwright/test": "1.64.1",
     "c8": "^12.0.0"
   }
 }

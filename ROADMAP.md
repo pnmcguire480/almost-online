@@ -6,10 +6,10 @@ Working rooms, IMs, buddy presence, away replies, profiles, host controls, ignor
 
 ## Next: build it together
 
-- Automate the browser workflows: two people talking, IMs, away, ignore and art cancellation; include keyboard and narrow-screen checks.
+- Shipped in v0.1.1: eight automated browser workflows covering room chat, IMs, away, ignore, art/cancellation, literal HTML rendering, buddy/session reset and keyboard/narrow-screen controls. Windows and Linux CI includes browser mutation controls and failure artifacts.
 - Collect sourced AOL 3.0 and Fate X references. Distinguish documented behavior from our own design choices.
 - Improve keyboard navigation, focus, readable scaling and sound preferences while preserving the look.
-- Add a small contributor-friendly browser test harness before growing the client.
+- Expand the browser harness as the client grows; keep tests focused on behavior and access boundaries.
 
 ## A connected edition
 
