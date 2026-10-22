@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Almost Online — Chat Room '96</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="service-frame">
+    <header id="service-chrome">
+      <div class="service-title"><span class="service-appicon">△</span> Almost Online <span class="service-version">Version 3.0</span><span class="service-captions" aria-hidden="true">_ ▣ ×</span></div>
+      <nav class="service-menu" aria-label="Application menu">
+        <button data-action="file"><u>F</u>ile</button><button data-action="people"><u>P</u>eople</button><button data-action="window"><u>W</u>indow</button><button data-action="help"><u>H</u>elp</button>
+      </nav>
+      <div class="service-tools" role="toolbar" aria-label="Almost Online toolbar">
+        <img class="service-logo" src="almost-online.png" alt="A0L — Almost Online">
+        <button data-action="im"><svg aria-hidden="true"><use href="icons.svg#im"/></svg><span>Instant Message</span></button>
+        <button data-action="people"><svg aria-hidden="true"><use href="icons.svg#people"/></svg><span>People</span></button>
+        <button data-action="buddies"><svg aria-hidden="true"><use href="icons.svg#buddies"/></svg><span>Buddy List</span></button>
+        <button data-action="profile"><svg aria-hidden="true"><use href="icons.svg#profile"/></svg><span>My Profile</span></button>
+        <button data-action="art"><svg aria-hidden="true"><use href="icons.svg#fate"/></svg><span>Fate X 3.0</span></button>
+        <button data-action="away"><svg aria-hidden="true"><use href="icons.svg#away"/></svg><span>Set Away</span></button>
+        <button data-action="signoff"><svg aria-hidden="true"><use href="icons.svg#signoff"/></svg><span>Sign Off</span></button>
+      </div>
+      <form id="keyword-form" class="keyword-strip"><label for="service-keyword">Keyword:</label><input id="service-keyword" type="text" placeholder="People Connection" autocomplete="off"><button type="submit">Go</button><span>Your room is waiting.</span></form>
+    </header>
+    <main id="desktop" aria-label="Chat Room 96 desktop"></main>
+    <div id="taskbar" role="toolbar" aria-label="Taskbar">
+      <span class="service-parody">A0L • LOCAL EDITION</span>
+      <div id="tasks"></div>
+      <div id="conn" class="sunken connecting">Connecting...</div>
+    </div>
+  </div>
+  <noscript><p class="nojs">Chat Room '96 needs JavaScript turned on.</p></noscript>
+  <script src="app.js"></script>
+</body>
+</html>
