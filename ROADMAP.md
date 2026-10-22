@@ -13,9 +13,11 @@ Working rooms, IMs, buddy presence, away replies, profiles, host controls, ignor
 
 ## A connected edition
 
-Decide together who can join, who owns screen names, what is retained, and who can moderate. Then design authentication, TLS, explicit trusted origins, global and per-user abuse controls, reporting and blocking, operational limits, recovery and privacy expectations.
+The connected edition will use **open registration**. [The proposed design and threat model](docs/CONNECTED.md) covers protected screen names, revocable sessions, recipient-controlled IMs, persistent blocking, moderation, abuse limits, privacy and recovery, with concrete acceptance tests and broken controls.
 
 The first milestone is a reviewed design and threat model. A hosted service will be a separate, tested milestone. Changing the listen address or putting this release behind a tunnel does not complete that work.
+
+Private rooms follow once the community needs them. They require server-enforced membership and delivery checks; today's named member rooms are public.
 
 ## Help wanted
 
